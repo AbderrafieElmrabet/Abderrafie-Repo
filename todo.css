@@ -1,0 +1,129 @@
+* {
+  font-family: sans-serif;
+}
+body {
+  background-color: rgb(9, 209, 235);
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  background-color: rgb(213, 227, 12);
+  color: tomato;
+  padding: 10px;
+  font-family: cursive;
+}
+
+article {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.canyouguess {
+  font-size: 30px;
+  color: black;
+}
+
+#rightanswer {
+  width: 200px;
+  height: 30px;
+  border: solid 3px;
+  margin-block: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: green;
+  border-radius: 10px;
+  color: green;
+  background-color: beige;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+#sound {
+  display: none;
+}
+
+#megaphone:hover {
+  cursor: pointer;
+}
+
+p {
+  color: tomato;
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+#rightanswers {
+  width: 200px;
+  height: 40px;
+  border: solid;
+  margin-block: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: rgb(213, 227, 12);
+  border-radius: 10px;
+  color: rgb(213, 227, 12);
+  background-color: rgb(198, 169, 224);
+  font-family: sans-serif;
+  font-weight: bold;
+}
+#rightanswers:hover{
+  background-color: #8c00ff;
+  cursor: pointer;
+}
+
+.answering {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+#image {
+  border: solid 4px;
+  border-radius: 15px;
+  border-color: rgb(213, 227, 12);
+  background-color: rgb(198, 169, 224);
+}
+
+#answer {
+  width: 100px;
+  height: 30px;
+}
+
+.answers {
+  display: flex !important;
+  gap: 10px;
+}
+
+/* CSS */
+.button-15 {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-15:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
