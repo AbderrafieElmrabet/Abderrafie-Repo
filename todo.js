@@ -1,52 +1,77 @@
 function allowdrop(ev) {
-  ev.preventDefault()
+  ev.preventDefault();
 }
 
 function drag(ev) {
-  ev.dataTransfer.setData('text', ev.target.id)
-  if (document.getElementById('rightanswer').innerHTML === "CORRECT") {
-    document.getElementById('rightanswer').innerHTML=""
+  ev.dataTransfer.setData("text", ev.target.id);
+  if (document.getElementById("rightanswer").innerHTML === "CORRECT") {
+    document.getElementById("rightanswer").innerHTML = "";
   }
 }
-
 function drop(ev) {
-  ev.preventDefault()
-  var data = ev.dataTransfer.getData('text')
-  ev.target.appendChild(document.getElementById(data))
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+  document.getElementById("rightanswer").style.borderColor = "green";
+  document.getElementById("rightanswer").style.color = "green";
 }
 
-const images = ["Animals/Sheep.png", "Animals/Elephant.png", "Animals/Lion.png", "Animals/Pig.png", "Animals/Chick.png", "Animals/YOU WIN!.gif"];
-const sounds = ["Animal Sounds/Sheep.mp3", "Animal Sounds/Elephant.mp3", "Animal Sounds/Lion.mp3", "Animal Sounds/Pig.mp3", "Animal Sounds/Chick.mp3"];
+const images = [
+  "Animals/Sheep.png",
+  "Animals/Elephant.png",
+  "Animals/Lion.png",
+  "Animals/Pig.png",
+  "Animals/Chick.png",
+  "Animals/YOU WIN!.gif",
+];
+const sounds = [
+  "Animal Sounds/Sheep.mp3",
+  "Animal Sounds/Elephant.mp3",
+  "Animal Sounds/Lion.mp3",
+  "Animal Sounds/Pig.mp3",
+  "Animal Sounds/Chick.mp3",
+  "Animal Sounds/YOU WIN!.mp3",
+];
 let currentImageIndex = 0;
 let currentSoundIndex = 0;
 
 function checkanswer() {
-  let answer = document.getElementById('rightanswer').textContent;
-  const currentImageName = images[currentImageIndex].split('/').pop().split('.')[0];
+  let answer = document.getElementById("rightanswer").textContent;
+  const currentImageName = images[currentImageIndex]
+    .split("/")
+    .pop()
+    .split(".")[0];
 
   if (answer === currentImageName) {
-    document.getElementById('rightanswer').style.borderColor='rgb(52, 84, 190)'
-    const imageElement = document.getElementById('image');
+    document.getElementById("rightanswer").style.borderColor =
+      "rgb(52, 84, 190)";
+    const imageElement = document.getElementById("image");
     currentImageIndex = (currentImageIndex + 1) % images.length;
     imageElement.src = images[currentImageIndex];
-    
-    const soundElement = document.getElementById('sound');
+
+    const soundElement = document.getElementById("sound");
     currentSoundIndex = (currentSoundIndex + 1) % sounds.length;
     soundElement.src = sounds[currentSoundIndex];
 
-
-    document.getElementById('rightanswer').style.borderColor='green'
-    document.getElementById('rightanswer').style.color='green'
-    document.getElementById('rightanswer').style.fontSize="25px"
-    document.getElementById('rightanswer').innerHTML="CORRECT"
-    document.getElementById('correct').play()
-  } else {
-    document.getElementById('rightanswer').style.borderColor='red'
-    document.getElementById('rightanswer').style.color='red'
-    document.getElementById('wrong').play()
-  } 
+    document.getElementById("rightanswer").style.borderColor = "green";
+    document.getElementById("rightanswer").style.color = "green";
+    document.getElementById("rightanswer").style.fontSize = "25px";
+    document.getElementById("rightanswer").innerHTML = "CORRECT";
+    document.getElementById("correct").play();
+  } else if (
+    answer != currentImageName &&
+    answer != "CORRECT" &&
+    answer != ""
+  ) {
+    document.getElementById("rightanswer").style.borderColor = "red";
+    document.getElementById("rightanswer").style.color = "red";
+    document.getElementById("wrong").play();
+  }
+  if (currentImageIndex === 5 && answer === currentImageName) {
+    document.getElementById("win").play();
+  }
 }
 function playSound() {
-  const soundElement = document.getElementById('sound');
+  const soundElement = document.getElementById("sound");
   soundElement.play();
 }

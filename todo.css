@@ -3,9 +3,9 @@
 }
 body {
   background-color: rgb(9, 209, 235);
-  -moz-transform: scale(0.65, 0.65);
-  zoom: 0.65;
-  zoom: 65%;
+  -moz-transform: scale(0.7, 0.7);
+  zoom: 0.7;
+  zoom: 70%;
 }
 header {
   display: flex;
@@ -62,7 +62,12 @@ article {
   margin-bottom: 5px;
 }
 
-#rightanswers {
+#draggable1,
+#draggable2,
+#draggable3,
+#draggable4,
+#draggable5,
+#draggable6 {
   width: 220px;
   height: 50px;
   border: solid;
@@ -78,7 +83,12 @@ article {
   font-weight: bold;
   font-size: 20px;
 }
-#rightanswers:hover {
+#draggable1:hover,
+#draggable2:hover,
+#draggable3:hover,
+#draggable4:hover,
+#draggable5:hover,
+#draggable6:hover {
   background-color: #8c00ff;
   cursor: pointer;
 }
@@ -141,4 +151,10 @@ article {
     rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px,
     rgba(44, 187, 99, 0.25) 0 16px 32px;
   transform: scale(1.05) rotate(-1deg);
+}
+
+@media (max-width:850px) {
+  #kidimg {
+    display: none;
+  }
 }
