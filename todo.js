@@ -39,11 +39,11 @@ function checkanswer() {
     document.getElementById('rightanswer').style.color='green'
     document.getElementById('rightanswer').style.fontSize="25px"
     document.getElementById('rightanswer').innerHTML="CORRECT"
-    document.getElementById('correct').play
+    document.getElementById('correct').play()
   } else {
     document.getElementById('rightanswer').style.borderColor='red'
     document.getElementById('rightanswer').style.color='red'
-    document.getElementById('wrong').play
+    document.getElementById('wrong').play()
   } 
 }
 function playSound() {
