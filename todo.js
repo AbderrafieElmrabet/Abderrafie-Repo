@@ -4,7 +4,7 @@ function allowdrop(ev) {
 
 function drag(ev) {
   ev.dataTransfer.setData("text", ev.target.id);
-  if (document.getElementById("rightanswer").innerHTML === "CORRECT") {
+  if (document.getElementById("rightanswer").innerHTML === "CORRECT!") {
     document.getElementById("rightanswer").innerHTML = "";
   }
 }
@@ -56,11 +56,11 @@ function checkanswer() {
     document.getElementById("rightanswer").style.borderColor = "green";
     document.getElementById("rightanswer").style.color = "green";
     document.getElementById("rightanswer").style.fontSize = "25px";
-    document.getElementById("rightanswer").innerHTML = "CORRECT";
+    document.getElementById("rightanswer").innerHTML = "CORRECT!";
     document.getElementById("correct").play();
   } else if (
     answer != currentImageName &&
-    answer != "CORRECT" &&
+    answer != "CORRECT!" &&
     answer != ""
   ) {
     document.getElementById("rightanswer").style.borderColor = "red";
