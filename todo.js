@@ -4,6 +4,9 @@ function allowdrop(ev) {
 
 function drag(ev) {
   ev.dataTransfer.setData('text', ev.target.id)
+  if (document.getElementById('rightanswer').innerHTML === "CORRECT") {
+    document.getElementById('rightanswer').innerHTML=""
+  }
 }
 
 function drop(ev) {
@@ -32,9 +35,15 @@ function checkanswer() {
     soundElement.src = sounds[currentSoundIndex];
 
 
-    document.getElementById('rightanswer').textContent = "";
+    document.getElementById('rightanswer').style.borderColor='green'
+    document.getElementById('rightanswer').style.color='green'
+    document.getElementById('rightanswer').style.fontSize="25px"
+    document.getElementById('rightanswer').innerHTML="CORRECT"
+    document.getElementById('correct').play
   } else {
     document.getElementById('rightanswer').style.borderColor='red'
+    document.getElementById('rightanswer').style.color='red'
+    document.getElementById('wrong').play
   } 
 }
 function playSound() {

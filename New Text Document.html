@@ -9,49 +9,55 @@
 </head>
 
 <body>
-  <header>Guess the Animal game !</header>
+  <header>Guess the Name Of This Animal !</header>
   <article class="main">
-    <h1 style="margin-bottom: -50px;" class="canyouguess">what is this animal called ?</h1>
-    <div class="topage">
-      <img style="margin-right: 100px; margin-top: -10px;" id="monkeymg" src="monkey.png" alt="monkey" width="300px">
-      <img id="image" src="Animals/Sheep.png" width="400px" alt="animal">
-      <img style="margin-left: 100px;" id="kidimg" src="kidthink.png" alt="kidthink" width="300px">
-    </div>
-    <div style="display: flex; gap: 10px;">
-      <p>click the megaphone to play sound!</p>
-      <img id="megaphone" onclick="playSound()" width="70px" src="megaphone.png" alt="megaphone">
+    <div class="page">
+      <div class="imgsdiv" style="display: flex;">
+        <img style="margin-right: 100px;" id="monkeymg" src="monkey.png" alt="monkey" width="300px">
+        <div>
+          <img id="image" src="Animals/Sheep.png" width="450px" style="margin-top: 15px;" alt="animal">
+        <img id="megaphone" onclick="playSound()" width="70px" height="70px" src="megaphone.png" alt="megaphone">
+        </div>
+        <img style="margin-left: 100px;" id="kidimg" src="kidthink.png" alt="kidthink" width="300px">  
+      </div>
+      <div class="answers">
+        <div>
+          <div id="rightanswers" ondragover="allowdrop(event)" ondrop="drop(event)">
+            <div id="answer1" draggable="true" ondragstart="drag(event)"><p style="width: 225px; text-align: center;">Lion</p></div>
+          </div>
+          <div id="rightanswers" ondragover="allowdrop(event)" ondrop="drop(event)">
+            <div id="answer2" draggable="true" ondragstart="drag(event)"><p style="width: 225px; text-align: center;">Pig</p></div>
+          </div>
+          <div id="rightanswers" ondragover="allowdrop(event)" ondrop="drop(event)">
+            <div id="answer3" draggable="true" ondragstart="drag(event)"><p style="width: 225px; text-align: center;">Elephant</p></div>
+          </div>
+        </div>
+        <div>
+          <div id="rightanswers" ondragover="allowdrop(event)" ondrop="drop(event)">
+            <div id="answer4" draggable="true" ondragstart="drag(event)"><p style="width: 225px; text-align: center;">Chick</p></div>
+          </div>
+          <div id="rightanswers" ondragover="allowdrop(event)" ondrop="drop(event)">
+            <div id="answer5" draggable="true" ondragstart="drag(event)"><p style="width: 225px; text-align: center;">Sheep</p></div>
+          </div>
+          <div id="rightanswers" ondragover="allowdrop(event)" ondrop="drop(event)">
+            <div id="answer6" draggable="true" ondragstart="drag(event)"><p style="width: 225px; text-align: center;">Tiger</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="answering">
+        <div id="rightanswer" ondragover="allowdrop(event)" ondrop="drop(event)"></div>
+        <button class="button-15" role="button" onclick="checkanswer()">Click To Answer</button>
+      </div>
     </div>
     <audio id="sound" controls>
       <source src="Animal Sounds/Sheep.mp3" type="audio/mpeg">
     </audio>
-    <div class="answering">
-      <p>drag the right animal here:</p>
-      <div id="rightanswer" ondragover="allowdrop(event)" ondrop="drop(event)"></div>
-      <button class="button-15" role="button" onclick="checkanswer()">Click To Answer</button>
-    </div>
-    <div class="answers">
-      <div id="rightanswers" ondragover="allowdrop(event)" ondrop="drop(event)">
-        <div id="answer1" draggable="true" ondragstart="drag(event)">Lion</div>
-      </div>
-      <div id="rightanswers" ondragover="allowdrop(event)" ondrop="drop(event)">
-        <div id="answer2" draggable="true" ondragstart="drag(event)">Pig</div>
-      </div>
-      <div id="rightanswers" ondragover="allowdrop(event)" ondrop="drop(event)">
-        <div id="answer3" draggable="true" ondragstart="drag(event)">Elephant</div>
-      </div>
-      <div id="rightanswers" ondragover="allowdrop(event)" ondrop="drop(event)">
-        <div id="answer4" draggable="true" ondragstart="drag(event)">Chick</div>
-      </div>
-      <div id="rightanswers" ondragover="allowdrop(event)" ondrop="drop(event)">
-        <div id="answer5" draggable="true" ondragstart="drag(event)">Sheep</div>
-      </div>
-      <div id="rightanswers" ondragover="allowdrop(event)" ondrop="drop(event)">
-        <div id="answer6" draggable="true" ondragstart="drag(event)">Tiger</div>
-      </div>
-    </div>
     </div>
   </article>
   <script src="todo.js"></script>
+
+  <audio id="wrong" src="wrong_sound_effect.mp3"></audio>
+  <audio id="correct" src="correct_sound_effect.mp3"></audio>
 </body>
 
 </html>
