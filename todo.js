@@ -1,19 +1,21 @@
 function allowdrop(ev) {
   ev.preventDefault();
+  document.getElementById("rightanswer").innerHTML = "";
 }
 
 function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
-  if (document.getElementById("rightanswer").innerHTML === "CORRECT!") {
-    document.getElementById("rightanswer").innerHTML = "";
-  }
+  // ev.dataTransfer.setData("text", ev.target.id);
+  ev.dataTransfer.setData("text", ev.target.innerHTML);
 }
 function drop(ev) {
-  ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
-  document.getElementById("rightanswer").style.borderColor = "green";
-  document.getElementById("rightanswer").style.color = "green";
+  if (ev.target.textContent === ""){
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    // ev.target.appendChild(document.getElementById(data));
+    ev.target.innerHTML = data;
+    document.getElementById("rightanswer").style.borderColor = "green";
+    document.getElementById("rightanswer").style.color = "green";
+  }
 }
 
 const images = [

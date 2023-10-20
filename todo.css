@@ -3,9 +3,9 @@
 }
 body {
   background-color: rgb(9, 209, 235);
-  -moz-transform: scale(0.65, 0.65);
-  zoom: 0.65;
-  zoom: 65%;
+  -moz-transform: scale(0.6, 0.6);
+  zoom: 0.6;
+  zoom: 60%;
 }
 header {
   display: flex;
