@@ -16,7 +16,8 @@
         <img id="monkeymg" src="monkey.png" alt="monkey" height="500px" width="450px">
         <div>
           <img id="image" src="Animals/Sheep.png" width="500px" style="margin-top: 15px;" alt="animal">
-        <img id="megaphone" onclick="playSound()" width="70px" height="70px" src="megaphone.png" alt="megaphone">
+          <img id="megaphone" onclick="playSound()" width="70px" height="70px" src="megaphone.png" alt="megaphone">
+          <div id="rightanswer" ondragover="allowdrop(event)" ondrop="drop(event)"></div>
         </div>
         <img id="kidimg" src="kidthink.png" alt="kidthink" height="500px" width="450px">  
       </div>
@@ -44,17 +45,13 @@
           </div>
         </div>
       </div>
-      <div class="answering">
-        <div id="rightanswer" ondragover="allowdrop(event)" ondrop="drop(event)"></div>
-        <button class="button-15" role="button" onclick="checkanswer()">Click To Answer</button>
-      </div>
     </div>
     <audio id="sound" controls>
       <source src="Animal Sounds/Sheep.mp3" type="audio/mpeg">
     </audio>
     </div>
   </article>
-  
+
   <script src="todo.js"></script>
 
   <audio id="wrong" src="wrong_sound_effect.mp3"></audio>

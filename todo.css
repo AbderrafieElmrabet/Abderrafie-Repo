@@ -32,7 +32,7 @@ article {
 }
 
 #rightanswer {
-  width: 240px;
+  width: 350px;
   height: 50px;
   border: solid 3px;
   margin-block: 10px;
@@ -46,6 +46,9 @@ article {
   font-family: sans-serif;
   font-weight: bold;
   font-size: 25px;
+  position: relative;
+  margin-top: -70px;
+  margin-left: 20px;
 }
 
 #sound {
@@ -58,7 +61,7 @@ article {
 
 #megaphone {
   position: relative;
-  margin-left: -80px;
+  margin-left: -90px;
   margin-bottom: 5px;
 }
 
