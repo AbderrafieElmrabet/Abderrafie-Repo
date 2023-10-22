@@ -3,9 +3,9 @@
 }
 body {
   background-color: rgb(9, 209, 235);
-  -moz-transform: scale(0.6, 0.6);
-  zoom: 0.6;
-  zoom: 60%;
+  -moz-transform: scale(0.55, 0.55);
+  zoom: 0.55;
+  zoom: 55%;
 }
 header {
   display: flex;
@@ -71,7 +71,7 @@ article {
 #draggable4,
 #draggable5,
 #draggable6 {
-  width: 240px;
+  width: 280px;
   height: 60px;
   border: solid;
   margin-block: 10px;
@@ -81,7 +81,7 @@ article {
   border-color: rgb(201, 215, 3);
   border-radius: 10px;
   color: rgb(201, 215, 3);
-  background-color: rgb(175, 123, 220);
+  background-color: #8c00ff;
   font-family: sans-serif;
   font-weight: bold;
   font-size: 20px;
@@ -92,7 +92,8 @@ article {
 #draggable4:hover,
 #draggable5:hover,
 #draggable6:hover {
-  background-color: #8c00ff;
+  color: #8c00ff;
+  background-color: rgb(201, 215, 3);
   cursor: pointer;
 }
 
@@ -118,8 +119,29 @@ article {
 .answers {
   display: flex !important;
   gap: 10px;
+  margin-left: 15px;
   justify-content: center;
   align-items: center;
+}
+
+#score,
+#scorep {
+  font-size: 45px;
+  font-weight: bold;
+  font-family: cursive;
+  color: rgb(16, 148, 16);
+  position: relative;
+  margin-left: 25px;
+  margin-bottom: -90px;
+}
+
+#scoreps {
+  font-size: 45px;
+  font-weight: bold;
+  font-family: cursive;
+  color: tomato;
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 /* CSS */
@@ -132,20 +154,20 @@ article {
     rgba(44, 187, 99, 0.15) 0 16px 32px;
   color: green;
   cursor: pointer;
-  display: inline-block;
   font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  display: none;
   padding: 7px 20px;
   text-align: center;
   text-decoration: none;
   transition: all 250ms;
   border: 0;
-  font-size: 20px;
+  font-size: 30px;
+  font-weight: bold;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  width: 240px;
-  height: 55px;
-  margin-left: 10px;
+  width: 420px;
+  height: 80px;
 }
 
 .button-15:hover {

@@ -14,20 +14,22 @@ const sounds = [
   "Animal Sounds/Chick.mp3",
   "Animal Sounds/YOU WIN!.mp3",
 ];
+let score = +document.getElementById("score").innerHTML;
 let currentImageIndex = 0;
 let currentSoundIndex = 0;
 
 function allowdrop(ev) {
-  ev.preventDefault();
-  document.getElementById("rightanswer").innerHTML = "";
+  if (currentImageIndex !== images.length - 1) {
+    ev.preventDefault();
+    document.getElementById("rightanswer").innerHTML = "";
+  }
 }
 
 function drag(ev) {
-  // ev.dataTransfer.setData("text", ev.target.id);
   ev.dataTransfer.setData("text", ev.target.innerHTML);
 }
 function drop(ev) {
-  if (ev.target.textContent === "") {
+  if (ev.target.textContent === "" && currentImageIndex !== images.length - 1) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
     // ev.target.appendChild(document.getElementById(data));
@@ -57,6 +59,8 @@ function drop(ev) {
       document.getElementById("rightanswer").style.fontSize = "25px";
       document.getElementById("rightanswer").innerHTML = "CORRECT!";
       document.getElementById("correct").play();
+      score += 20;
+      document.getElementById("score").innerHTML = score;
     } else if (
       answer != currentImageName &&
       answer != "CORRECT!" &&
@@ -65,10 +69,21 @@ function drop(ev) {
       document.getElementById("rightanswer").style.borderColor = "red";
       document.getElementById("rightanswer").style.color = "red";
       document.getElementById("wrong").play();
+      score -= 15;
+      document.getElementById("score").innerHTML = score;
     }
-    if (currentImageIndex === 5 && answer === currentImageName) {
+    if (
+      currentImageIndex === images.length - 1 &&
+      answer === currentImageName
+    ) {
       document.getElementById("win").play();
     }
+  }
+  if (currentImageIndex === images.length - 1 && score >= 70) {
+    document.getElementById("nextbutton").style.display = "block";
+    document.getElementById(
+      "scoreps"
+    ).innerHTML = `You Scored ${score} Points!`;
   }
 }
 function playSound() {
