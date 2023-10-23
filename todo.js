@@ -6,6 +6,7 @@ const images = [
   "Animals/Chick.png",
   "Animals/YOU WIN!.gif",
 ];
+
 const sounds = [
   "Animal Sounds/Sheep.mp3",
   "Animal Sounds/Elephant.mp3",
@@ -14,6 +15,7 @@ const sounds = [
   "Animal Sounds/Chick.mp3",
   "Animal Sounds/YOU WIN!.mp3",
 ];
+
 let score = +document.getElementById("score").innerHTML;
 let currentImageIndex = 0;
 let currentSoundIndex = 0;
@@ -83,7 +85,11 @@ function drop(ev) {
     document.getElementById("nextbutton").style.display = "block";
     document.getElementById(
       "scoreps"
-    ).innerHTML = `You Scored ${score} Points!`;
+    ).innerHTML = `WIN! You Scored ${score} Points :D`;
+  } else if (currentImageIndex === images.length - 1 && score <= 70){
+    document.getElementById(
+      "scoreps"
+    ).innerHTML = `LOSS! You Scored ${score} Points D:`;
   }
 }
 
