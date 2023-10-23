@@ -1,17 +1,17 @@
 const images = [
-  "Vegetables/Carrot.png",
-  "Vegetables/Corn.png",
-  "Vegetables/Eggplant.png",
-  "Vegetables/Pumpkin.png",
-  "Vegetables/Tomato.png",
+  "BodyParts/Arm.png",
+  "BodyParts/Eyes.png",
+  "BodyParts/Foot.png",
+  "BodyParts/Hand.png",
+  "BodyParts/Leg.png",
   "Animals/YOU WIN!.gif",
 ];
 const sounds = [
-  "Vegetable sounds/Carrot.mp3",
-  "Vegetable sounds/Corn.mp3",
-  "Vegetable sounds/Eggplant.mp3",
-  "Vegetable sounds/Pumpkin.mp3",
-  "Vegetable sounds/Tomato.mp3",
+  "BodyPart sounds/Arm.mp3",
+  "BodyPart sounds/Eyes.mp3",
+  "BodyPart sounds/Foot.mp3",
+  "BodyPart sounds/Hand.mp3",
+  "BodyPart sounds/Leg.mp3",
   "Animal Sounds/YOU WIN!.mp3",
 ];
 let score = +document.getElementById("score").innerHTML;

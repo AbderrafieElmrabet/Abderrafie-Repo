@@ -3,9 +3,9 @@
 }
 body {
   background-color: rgb(9, 209, 235);
-  -moz-transform: scale(0.55, 0.55);
-  zoom: 0.55;
-  zoom: 55%;
+  -moz-transform: scale(0.5, 0.5);
+  zoom: 0.5;
+  zoom: 50%;
 }
 header {
   display: flex;
@@ -34,7 +34,7 @@ article {
 #rightanswer {
   width: 350px;
   height: 50px;
-  border: solid 3px;
+  border: solid 4px;
   margin-block: 10px;
   display: flex;
   align-items: center;
@@ -47,7 +47,7 @@ article {
   font-weight: bold;
   font-size: 25px;
   position: relative;
-  margin-top: -70px;
+  margin-top: -75px;
   margin-left: 20px;
 }
 

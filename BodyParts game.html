@@ -9,14 +9,14 @@
 </head>
 
 <body>
-  <header>What's The Name Of This Vegetable ?</header>
+  <header>What's The Name Of This Body Part ?</header>
   <article class="main">
     <div class="page">
       <div class="imgsdiv" style="display: flex;">
         <img id="monkeymg" src="monkey.png" alt="monkey" height="600px" width="500px">
         <div>
           <div id="scorediv" style="display: flex;"><p id="scorep">Your Score! :</p> <p id="score">0</p></div>
-          <img id="image" src="Vegetables/Carrot.png" width="600px" style="margin-top: 15px; padding-top: 50px;" alt="animal">
+          <img id="image" src="BodyParts/Arm.png" width="600px" style="margin-top: 15px; padding-top: 50px;" alt="animal">
           <img id="megaphone" onclick="playSound()" width="70px" height="70px" src="megaphone.png" alt="megaphone">
           <div id="rightanswer" ondragover="allowdrop(event)" ondrop="drop(event)"></div>
         </div>
@@ -25,21 +25,21 @@
       <div class="answers">
         <div>
           <div id="draggable1" ondragover="allowdrop(event)" ondrop="drop(event)">
-            <div id="answer1" draggable="true" data-draggable="true" ondragstart="drag(event)"><p style="width: 225px; text-align: center;">Corn</p></div>
+            <div id="answer1" draggable="true" data-draggable="true" ondragstart="drag(event)"><p style="width: 225px; text-align: center;">Foot</p></div>
           </div>
           <div id="draggable2" ondragover="allowdrop(event)" ondrop="drop(event)">
-            <div id="answer2" draggable="true" data-draggable="true" ondragstart="drag(event)"><p style="width: 225px; text-align: center;">Tomato</p></div>
+            <div id="answer2" draggable="true" data-draggable="true" ondragstart="drag(event)"><p style="width: 225px; text-align: center;">Hand</p></div>
           </div>
           <div id="draggable3" ondragover="allowdrop(event)" ondrop="drop(event)">
-            <div id="answer3" draggable="true" data-draggable="true" ondragstart="drag(event)"><p style="width: 225px; text-align: center;">Eggplant</p></div>
+            <div id="answer3" draggable="true" data-draggable="true" ondragstart="drag(event)"><p style="width: 225px; text-align: center;">Leg</p></div>
           </div>
         </div>
         <div>
           <div id="draggable4" ondragover="allowdrop(event)" ondrop="drop(event)">
-            <div id="answer4" draggable="true" data-draggable="true" ondragstart="drag(event)"><p style="width: 225px; text-align: center;">Pumpkin</p></div>
+            <div id="answer4" draggable="true" data-draggable="true" ondragstart="drag(event)"><p style="width: 225px; text-align: center;">Arm</p></div>
           </div>
           <div id="draggable5" ondragover="allowdrop(event)" ondrop="drop(event)">
-            <div id="answer5" draggable="true" data-draggable="true" ondragstart="drag(event)"><p style="width: 225px; text-align: center;">Carrot</p></div>
+            <div id="answer5" draggable="true" data-draggable="true" ondragstart="drag(event)"><p style="width: 225px; text-align: center;">Eyes</p></div>
           </div>
           <div id="draggable6" ondragover="allowdrop(event)" ondrop="drop(event)">
             <div id="answer6" draggable="true" data-draggable="true" ondragstart="drag(event)"><p style="width: 225px; text-align: center;">Botato</p></div>
@@ -53,7 +53,7 @@
       </div>
     </div>
     <audio id="sound" controls>
-      <source src="Vegetable sounds/Carrot.mp3" type="audio/mpeg">
+      <source src="BodyPart sounds/Arm.mp3" type="audio/mpeg">
     </audio>
     </div>
   </article>
@@ -61,7 +61,7 @@
   <audio id="correct" src="correct_sound_effect.mp3"></audio>
   <audio id="win" src="Animal Sounds/YOU WIN!.mp3"></audio>
   <audio id="nextsound" src="Next.mp3"></audio>
-  <script src="Vegetables.js"></script>
+  <script src="BodyParts.js"></script>
 </body>
 
 </html>

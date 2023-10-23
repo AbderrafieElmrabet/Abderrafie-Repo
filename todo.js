@@ -86,7 +86,17 @@ function drop(ev) {
     ).innerHTML = `You Scored ${score} Points!`;
   }
 }
+
 function playSound() {
   const soundElement = document.getElementById("sound");
   soundElement.play();
+}
+
+function nextSound() {
+  const nextsound = document.getElementById("nextsound");
+  nextsound.play();
+
+  nextsound.onended = () => {
+    window.location.href = "Vegetables game.html";
+  };
 }
