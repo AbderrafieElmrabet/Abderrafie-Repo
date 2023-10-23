@@ -7,11 +7,11 @@ const images = [
   "Animals/YOU WIN!.gif",
 ];
 const sounds = [
-  "Animal Sounds/Sheep.mp3",
-  "Animal Sounds/Elephant.mp3",
-  "Animal Sounds/Lion.mp3",
-  "Animal Sounds/Pig.mp3",
-  "Animal Sounds/Chick.mp3",
+  "Vegetable sounds/Carrot.mp3",
+  "Vegetable sounds/Corn.mp3",
+  "Vegetable sounds/Eggplant.mp3",
+  "Vegetable sounds/Pumpkin.mp3",
+  "Vegetable sounds/Tomato.mp3",
   "Animal Sounds/YOU WIN!.mp3",
 ];
 let score = +document.getElementById("score").innerHTML;
