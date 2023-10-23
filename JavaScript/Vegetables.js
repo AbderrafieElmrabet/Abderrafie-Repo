@@ -84,7 +84,11 @@ function drop(ev) {
     document.getElementById("nextbutton").style.display = "block";
     document.getElementById(
       "scoreps"
-    ).innerHTML = `You Scored ${score} Points!`;
+    ).innerHTML = `WIN! You Scored ${score} Points :D`;
+  } else if (currentImageIndex === images.length - 1 && score <= 70){
+    document.getElementById(
+      "scoreps"
+    ).innerHTML = `LOSS! You Scored only ${score} Points D:`;
   }
 }
 
